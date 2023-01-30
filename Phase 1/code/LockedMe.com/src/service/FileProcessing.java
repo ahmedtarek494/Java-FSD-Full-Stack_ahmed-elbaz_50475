@@ -59,7 +59,7 @@ public class FileProcessing {
 			System.out.println("File deleted...");
 
 		} else {
-			System.out.println("File not exists");
+			System.out.println("File not found");
 		}
 	}
 }
