@@ -21,9 +21,11 @@ public class Class {
 	private String name;
 	
 	@OneToOne
+    @JoinColumn(name="TeacherID")
 	private Teachers teacherId;
 	
 	@OneToOne
+    @JoinColumn(name="SubjectID")
 	private Subject subjectId;
 	
 	@OneToMany

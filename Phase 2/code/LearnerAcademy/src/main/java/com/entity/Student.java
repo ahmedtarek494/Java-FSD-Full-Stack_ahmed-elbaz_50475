@@ -4,6 +4,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
 import javax.persistence.OneToOne;
 
 @Entity
@@ -15,9 +16,10 @@ public class Student {
 	
 	private String name;
 	
-	private int grade;
+	private String grade;
 	
 	@OneToOne
+	@JoinColumn(name="ClassID")
 	private Class classId;
 
 	public int getId() {
@@ -36,11 +38,13 @@ public class Student {
 		this.name = name;
 	}
 
-	public int getGrade() {
+
+
+	public String getGrade() {
 		return grade;
 	}
 
-	public void setGrade(int grade) {
+	public void setGrade(String grade) {
 		this.grade = grade;
 	}
 
